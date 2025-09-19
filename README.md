@@ -1,6 +1,6 @@
-# Password Manager
+# Link Manager
 
-Projeto acadêmico de um **Gerenciador de Senhas**, usando **Next.js + TypeScript + Docker + Postgres**.  
+Projeto acadêmico de um **Gerenciador de Links**, usando **Next.js + TypeScript + Docker + Postgres**.  
 
 ---
 
