@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import styles from "../page.module.css";
+import { Edit, Trash, Folder } from "lucide-react";
 
 type Folder = {
   id: number;
@@ -149,19 +150,13 @@ export default function DashboardPage() {
             <ul className={styles.folderList}>
               {folders.map((f) => (
                 <li key={f.id} className={styles.folderItem}>
-                  <span>{f.name}</span>
+                  <span style={{ display: "inline-flex", alignItems: "center" }}><Folder size={18} style={{ marginRight: "6px" }} /> {f.name}</span>
                   <div className={styles.folderActions}>
-                    <button
-                      onClick={() => handleRenameFolder(f.id)}
-                      className={styles.editBtn}
-                    >
-                      editar
+                    <button onClick={() => handleRenameFolder(f.id)} className={styles.editBtn}>
+                      <Edit size={16} />
                     </button>
-                    <button
-                      onClick={() => handleDeleteFolder(f.id)}
-                      className={styles.deleteBtn}
-                    >
-                      apagar
+                    <button onClick={() => handleDeleteFolder(f.id)} className={styles.deleteBtn}>
+                      <Trash size={16} />
                     </button>
                   </div>
                 </li>
