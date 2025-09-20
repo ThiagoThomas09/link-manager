@@ -149,7 +149,7 @@ export default function DashboardPage() {
           ) : (
             <ul className={styles.folderList}>
               {folders.map((f) => (
-                <li key={f.id} className={styles.folderItem}>
+                <li key={f.id} className={styles.folderItem} onClick={() => router.push(`/folders/${f.id}`)} style={{ cursor: "pointer" }}>
                   <span style={{ display: "inline-flex", alignItems: "center" }}><Folder size={18} style={{ marginRight: "6px" }} /> {f.name}</span>
                   <div className={styles.folderActions}>
                     <button onClick={() => handleRenameFolder(f.id)} className={styles.editBtn}>
