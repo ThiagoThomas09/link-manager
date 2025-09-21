@@ -1,4 +1,4 @@
-import jwt from "jsonwebtoken";
+import jwt, { SignOptions } from "jsonwebtoken";
 
 const secret = process.env.JWT_SECRET;
 
@@ -15,7 +15,7 @@ type JWTPayload = {
 export function signToken(userId: number, expiresIn: string = "7d"): string {
   if (!secret) throw new Error("JWT_SECRET ausente");
   const payload: JWTPayload = { userId };
-  return jwt.sign(payload, secret, { expiresIn });
+  return jwt.sign(payload, secret, { expiresIn } as SignOptions);
 }
 
 // Retorna o userId do header Authorization: Bearer <token>
