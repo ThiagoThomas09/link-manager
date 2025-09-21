@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { getUserIdFromRequest } from "@/app/lib/auth";
+import { getUserIdFromRequest } from "@/lib/auth";
 
 // Criar novo link
 export async function POST(req: Request) {
