@@ -1,0 +1,81 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  height: var(--header-height);
+  background-color: #100f10;
+  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  color: #f5f5f5;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0 1.5rem;
+}
+
+.brand {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #00ffff;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navLink {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #e2e2e2;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navLink:hover {
+  background-color: rgba(0, 255, 255, 0.12);
+  color: #00ffff;
+}
+
+.active {
+  background-color: rgba(0, 255, 255, 0.2);
+  color: #000;
+}
+
+@media (max-width: 600px) {
+  .inner {
+    gap: 0.75rem;
+    padding: 0 1rem;
+  }
+
+  .nav {
+    gap: 0.5rem;
+  }
+
+  .navLink {
+    font-size: 0.9rem;
+    padding: 0.3rem 0.55rem;
+  }
+}
+
+.logoutBtn {
+  background: none;
+  border: none;
+  color: #ff6666;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.logoutBtn:hover {
+  text-decoration: underline;
+  color: #ff4444;
+}
