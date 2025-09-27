@@ -121,8 +121,6 @@
   transform: scale(1.2);
 }
 
-/* Links (cards) */
-
 .linkList {
   display: flex;
   flex-direction: column;
@@ -168,7 +166,6 @@
   font-size: 0.9rem;
 }
 
-/* Ações dos cards */
 .linkActions {
   display: inline-flex;
   gap: 0.4rem;
