@@ -23,3 +23,5 @@ Subir a aplicação (Next.js + Postgres):
 5. Acesse no navegador:
     - http://localhost:3000
     - http://localhost:3000/api/health
+6. Deploy do site:
+    - https://link-manager-omega.vercel.app/
